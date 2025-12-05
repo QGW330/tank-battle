@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坦克大战 - Tank Battle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>坦克大战</h1>
+            <div class="game-stats">
+                <div class="stat-item">
+                    <span class="stat-label">得分:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">生命:</span>
+                    <span id="lives">3</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">敌人:</span>
+                    <span id="enemies">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="startScreen" class="screen">
+            <div class="screen-content">
+                <h2>坦克大战</h2>
+                <p>使用 WASD 或方向键移动</p>
+                <p>空格键或鼠标左键射击</p>
+                <button id="startBtn" class="btn">开始游戏</button>
+            </div>
+        </div>
+        
+        <div id="gameOverScreen" class="screen hidden">
+            <div class="screen-content">
+                <h2 id="gameOverTitle">游戏结束</h2>
+                <p>最终得分: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn">重新开始</button>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <div class="control-info">
+                <p><strong>控制说明:</strong></p>
+                <p>WASD / ↑↓←→ : 移动</p>
+                <p>空格 / 鼠标左键 : 射击</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
+
+
+
